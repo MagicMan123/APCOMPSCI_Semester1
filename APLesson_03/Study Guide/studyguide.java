@@ -28,7 +28,7 @@ public class studyguide
 		//C: Is there a Mr. or Mrs. Buster?
 		
 		//Question 6 
-		//B
+		//A
 		
 		//Questions 7
 		/* The text that is trying to be displayed has a quotation mark inside it
