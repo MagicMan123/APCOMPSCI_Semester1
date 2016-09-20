@@ -28,6 +28,7 @@ public class idcard
 		
 		form.format(firstname, lastname, title, school, year, subject);
 	}
+	
 	public void format(String firstname, String lastname, String title, String school, String year, String subject)
 	{
 		System.out.printf("***********************************\n*  %10s           %10s *\n*       %10s         %10s *\n*       %10s  %10s *\n***********************************",school, year, firstname, lastname, title, subject);
