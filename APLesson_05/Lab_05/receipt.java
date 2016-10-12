@@ -50,6 +50,6 @@ public class receipt
 	}
 	public static void format(String item1, double price1, String item2, double price2, String item3, double price3, double subtotal) 
 	{
-		System.out.printf("<<<<<<<<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>>>>>>\n\n*%9s ........   %5.2f\n*%9s ........   %5.2f\n*%9s ........   %5.2f\n\n*     Subtotal ........   %5.2f\n*     Discount ........   %5.2f\n*     Total ........   %9.2f",item1,price1,item2,price2,item3,price3,(subtotal),discount(subtotal)*(subtotal),(1-(discount(subtotal)))*(subtotal));
+		System.out.printf("<<<<<<<<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>>>>>>\n\n*%9s ........   %5.2f\n*%9s ........   %5.2f\n*%9s ........   %5.2f\n\n*     Subtotal ........   %5.2f\n*     Discount ........   %5.2f\n*     Tax      ........   %5.2f\n*     Total    ........   %5.2f\n\n",item1,price1,item2,price2,item3,price3,(subtotal),discount(subtotal)*(subtotal),.08*((1-(discount(subtotal)))*(subtotal)),(1-(discount(subtotal)))*(subtotal));
 	}
 }
