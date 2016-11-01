@@ -26,11 +26,16 @@ public class idcard
 		System.out.println("What is your subject? ");
 		String subject = kb.nextLine();
 		
-		form.format(firstname, lastname, title, school, year, subject);
+		
+		System.out.println("*************************************");
+		form.format(school, year);
+		form.format(firstname, lastname);
+		form.format(title, subject);
+		System.out.println("*************************************");
 	}
 	
-	public void format(String firstname, String lastname, String title, String school, String year, String subject)
+	public void format(String a, String b)
 	{
-		System.out.printf("***********************************\n*  %10s           %10s *\n*       %10s         %10s *\n*       %10s  %10s *\n***********************************",school, year, firstname, lastname, title, subject);
+		System.out.printf("*  %12s         %12s*\n",a, b);
 	}
 }

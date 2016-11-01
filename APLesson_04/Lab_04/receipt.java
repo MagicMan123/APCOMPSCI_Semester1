@@ -31,11 +31,25 @@ public class receipt
 		System.out.println("Please enter the price:");
 		double price3 = kb.nextDouble();
 		
-		form.format(item1, price1, item2, price2, item3, price3);
+		double subtotal = price1+price2+price3;
+		double tax = .08*subtotal;
+		double total = subtotal+tax;
+		
+		System.out.printf("<<<<<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>>>\n\n");
+		form.format(item1,price1);
+		form.format(item2,price2);
+		form.format(item3,price3);
+		System.out.println("");
+		form.format("Subtotal",subtotal);
+		form.format("Tax",tax);
+		form.format("Total",total);
+		System.out.println("_____________________________________\n* Thank you for your support *");
 	}
 	
-	public void format(String item1, double price1, String item2, double price2, String item3, double price3) 
+	public void format(String name, double value) 
 	{
-		System.out.printf("<<<<<<<<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>>>>>>\n\n*%15s ........   %5.2f\n*%15s ........   %5.2f\n*%15s ........   %5.2f\n\n*Subtotal ........   %5.2f\n*Tax ........   %5.2f\n*Total ........   %5.2f",item1,price1,item2,price2,item3,price3,(price1+price2+price3),0.08*(price1+price2+price3),1.08*(price1+price2+price3));
+		
+		System.out.printf("*%18s ........   %5.2f\n",name, value);
+		
 	}
 }

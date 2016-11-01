@@ -21,10 +21,10 @@ public class interest
 		double n = kb.nextDouble();
 		
 		double intr = calc.calc(r,p, n,t);
-		System.out.println("Your total payment is $" + intr);
+		System.out.printf("Your monthly payment is $%.2f", intr);
 	}
 	public double calc(double r, double p, double n, double t)
 	{
-		return (p*(Math.pow((1+(r/n)),n*t)))/12;
+		return (p*(Math.pow((1+(r/n)),n*t)))/(t*12);
 	}
 }
