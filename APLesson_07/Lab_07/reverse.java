@@ -7,18 +7,20 @@ public class reverse
 		Scanner kb = new Scanner(System.in);
 		
 		System.out.println("What is your number? ");
-		int number = kb.nextInt();
+		int num = kb.nextInt();
 		
-		int num = number;
 		int rev = 0;
 		
-		getReverse(num, number, rev);
+		getReverse(num, rev);
 	}
-	public static void getReverse(int num, int number, int rev)
+	public static void getReverse(int num, int rev)
 	{
 		while(num > 0 )
 		{
-			
+			rev = rev*10;
+			rev = rev + (num%10);
+			num = num/10;
 		}
+		System.out.println("The reverse of your number is " + rev);
 	}
 }
