@@ -18,7 +18,7 @@ public class tree60
 	{
 		if(start <= stop)
 		{
-			System.out.println(word.substring(0,start));
+			System.out.printf("%20s\n",word.substring(0,start));
 			start++;
 			return tree(word, start, stop);
 		}
