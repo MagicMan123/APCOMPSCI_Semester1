@@ -12,7 +12,7 @@ public class cube
 		double side = kb.nextDouble();
 		
 		double sa = calc.sa(side);
-		System.out.println("The surface area of a cube with "+ side + " side length is " + s10a + ".");
+		System.out.println("The surface area of a cube with "+ side + " side length is " + sa + ".");
 	}
 	public double sa(double side)
 	{
