@@ -30,21 +30,12 @@ public class dist_class
 		yTwo = 0;
 	}
 	
-	public int getxOne()
+	public void setall(int x1, int y1, int x2, int y2)
 	{
-		return xOne;
-	}
-	public int getyOne()
-	{
-		return yOne;
-	}
-	public int getxTwo()
-	{
-		return xTwo;
-	}
-	public int getyTwo()
-	{
-		return yTwo;
+		xOne = x1;
+		yOne = y1;
+		xTwo = x2;
+		yTwo = y2;
 	}
 	
 	public double calcdist()
