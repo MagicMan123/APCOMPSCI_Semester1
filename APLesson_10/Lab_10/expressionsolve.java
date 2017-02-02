@@ -11,7 +11,7 @@ public class expressionsolve
 		System.out.println("Enter an expression to have solved: ");
 		String expression = kb.nextLine();
 		
-		ArrayList<String> equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
+		ArrayList<String> equation = new ArrayList<>(Arrays.asList(expression.split("")));
 		
 		doEquation(equation);
 	}
