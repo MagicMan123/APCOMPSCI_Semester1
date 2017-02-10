@@ -4,12 +4,16 @@ public class toyrunner
 {
 	public static void main(String[]args)
 	{
-		Afigure_class robot = new Afigure_class("Autobot");
+		Afigure robot = new Afigure("Autobot");
 		
-		car_class ferrari = new car_class("Ferrari");
+		Car ferrari = new Car("Ferrari");
 		
 		System.out.println(robot.toString());
 		
 		System.out.println(ferrari.toString());
+		
+		toystore store = new toystore("Hotwheel, Car, G.I.Joe, AF, PennyRacer, Car, Matchbox, Car, Star Wars, AF, Pullback, Car, Star Wars, AF");
+		
+		System.out.println(store);
 	}
 }
