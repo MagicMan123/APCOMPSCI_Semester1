@@ -12,8 +12,13 @@ public class toyrunner
 		
 		System.out.println(ferrari.toString());
 		
+		System.out.println("\n");
 		toystore store = new toystore("Hotwheel, Car, G.I.Joe, AF, PennyRacer, Car, Matchbox, Car, Star Wars, AF, Pullback, Car, Star Wars, AF");
 		
 		System.out.println(store);
+		
+		System.out.println("\n");
+		System.out.println(store.getMostFrequentToy());
+		System.out.println(store.getMostFrequentType());
 	}
 }

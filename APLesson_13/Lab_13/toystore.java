@@ -69,7 +69,7 @@ public class toystore
 		return name;
 	}
 	
-	public void getMostFrequentType()
+	public int getMostFrequentType()
 	{
 		int cars = 0;
 		int figures = 0;
@@ -84,6 +84,14 @@ public class toystore
 			{
 				cars =+ 1;
 			}
+		}
+		if(cars > figures)
+		{
+			return cars;
+		}
+		else
+		{
+			return figures;
 		}
 	}
 	
