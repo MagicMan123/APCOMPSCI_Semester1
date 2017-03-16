@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class satellite
 {
-	private static double movex, movey; 
    public static void main(String[]args)
    {
        ArrayList<Location> locate = new ArrayList<>();
@@ -21,13 +20,12 @@ public class satellite
 
        for (Location l : locate)
        {
-		   movex = (double)(Math.random()*100);
-		   movey = (double)(Math.random()*100);
-		   
-		   String movex1 = String.format("%.2f", movex);
-		   String movey1 = String.format("%.2f", movey);
-		   
-           printout += "After " + l.getID() + " Moved (" + movex1 + ", " + movey1 + ")\n";
+		   double movex = (int)(Math.random()*10000);
+		   double movey = (int)(Math.random()*10000);
+		   movex = movex/100.0;
+		   movey = movey/100.0;
+           printout += "After " + l.getID() + " Moved (" + getLocation(l.getLoc()) + ")\n";
+		   l.move(movex,movey);
 		   printout += "New Location: (" + getLocation(l.getLoc()) + ")\n\n";
        }
 
@@ -48,12 +46,12 @@ public class satellite
 
    public static double getDistance(double[] car, double[] home)
    {
-       return Math.sqrt((Math.pow((car[0]+movex) - home[0], 2)+ Math.pow((car[1]+movey) - home[1], 2)));
+       return Math.sqrt((Math.pow(car[0] - home[0], 2)+ Math.pow(car[1] - home[1], 2)));
    }
 
 
    public static String getLocation(double[] loc)
    {
-       return String.format("%.2f" + ", " + "%.2f",loc[0]+movex,loc[1]+movey);
+       return loc[0] + ", " + loc[1];
    }
 }
