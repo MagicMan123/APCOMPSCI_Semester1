@@ -39,6 +39,6 @@ public abstract class Toy
 	
 	public String toString()
 	{
-		return "\nName: " + this.name + "\nCount: " + this.count;
+		return "" + this.name + " " + this.count + "";
 	}
 }
