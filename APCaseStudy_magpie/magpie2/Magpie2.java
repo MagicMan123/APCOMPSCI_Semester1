@@ -40,6 +40,11 @@ public class Magpie2
 		{
 		  response = transformIWantToStatement(statement);
 		}
+		
+		else if (findKeyword(statement, "i like you", 0) >= 0)
+		{
+		  response = transformIlikeYouStatement(statement);
+		}
 		 
 		else
 		{
@@ -72,6 +77,21 @@ public class Magpie2
 		String restOfStatement = phrase.substring(psn+10);
 		
 		return "What would it mean to" + restOfStatement;
+	}
+	
+	private String transformIlikeYouStatement(String statement)
+	{
+		String phrase = statement.trim().toLowerCase();
+		String lastChar = phrase.substring(phrase.length());
+		if(lastChar.equals("."))
+		{
+			phrase.replace(".","");
+		}
+		
+		int psn = findKeyword(phrase,"i like you",0);
+		String restOfStatement = phrase.substring(psn+10);
+		
+		return "Why do you like me?";
 	}
 	
 	private String transformYouMeStatement(String statement)
