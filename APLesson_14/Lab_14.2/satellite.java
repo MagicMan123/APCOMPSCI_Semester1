@@ -14,9 +14,25 @@ public class satellite
        double[] home = {0, 0};
 
 
-       String printout = "\n\n" +
+      String printout = "\n\n" +
                "==========================\n";
+		for (Location l : locate)
+       {
+           printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
+       }
 
+
+       printout += "\n\n" + "==========================" +
+                   "\nDistance from home...";
+
+
+       for (Location l : locate)
+       {
+           printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+       }
+
+	   printout +="\n\n==========================\n";
+	   
 
        for (Location l : locate)
        {

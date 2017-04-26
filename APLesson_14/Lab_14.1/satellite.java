@@ -17,8 +17,23 @@ public class satellite
 
        String printout = "\n\n" +
                "==========================\n";
+		for (Location l : locate)
+       {
+           printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
+       }
 
 
+       printout += "\n\n" + "==========================" +
+                   "\nDistance from home...";
+
+
+       for (Location l : locate)
+       {
+           printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+       }
+
+	   printout +="\n\n==========================\n";
+	   
        for (Location l : locate)
        {
 		   movex = (double)(Math.random()*100);
@@ -28,7 +43,7 @@ public class satellite
 		   String movey1 = String.format("%.2f", movey);
 		   
            printout += "After " + l.getID() + " Moved (" + movex1 + ", " + movey1 + ")\n";
-		   printout += "New Location: (" + getLocation(l.getLoc()) + ")\n\n";
+		   printout += "New Location: (" + getLocation(l.getLoc()) + ")\n";
        }
 
 

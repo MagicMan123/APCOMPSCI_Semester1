@@ -60,7 +60,7 @@ public class Card {
 	 *         false otherwise.
 	 */
 	public boolean matches(Card otherCard) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		return this.equals(otherCard);
 	}
 
 	/**
@@ -75,6 +75,6 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		return rank() + suit() + "(" + pointValue() + ")\n";
 	}
 }
