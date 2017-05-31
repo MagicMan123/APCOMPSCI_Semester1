@@ -59,6 +59,14 @@ public class PictureTester
     snow.explore();
   }
   
+  public static void testRighttoLeft()
+  {
+    Picture snow = new Picture("seagull.jpg");
+    snow.explore();
+    snow.mirrorVerticalRightoLeft();
+    snow.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -130,6 +138,7 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
 	//testMirrorHorizontal();
+	//testRighttoLeft();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
